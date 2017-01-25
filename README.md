@@ -5,7 +5,7 @@ To use:
 
 app.module
 
-    import { OrderByPipe } from './shared/orderBy.pipe'; <- replace with whereever you drop the pipe
+    import { OrderByPipe } from './shared/orderBy.pipe'; <- replace with wherever you drop the pipe
 
     @NgModule({
         ...
@@ -19,6 +19,10 @@ app.module
 list.component.html
 
     <th><a (click)='onOrderBy("project_name")'>Name{{orderBy === 'project_name' ? orderDesc ? '▼' : '▲' : ''}}</a></th>
+    
+    ...
+    
+    <tr *ngFor='let project of projects | orderBy:orderBy:orderDesc'>
 
 list.component.ts
 

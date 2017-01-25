@@ -5,20 +5,20 @@ To use:
 
 app.module
 
-import { OrderByPipe } from './shared/orderBy.pipe'; <- replace with whereever you drop the pipe
+    import { OrderByPipe } from './shared/orderBy.pipe'; <- replace with whereever you drop the pipe
 
-@NgModule({
-    ...
-  declarations: [ 
-      ...
-    OrderByPipe
-    ]
-    ...
-})
+    @NgModule({
+        ...
+      declarations: [ 
+          ...
+        OrderByPipe
+        ]
+        ...
+    })
 
 list.component.html
 
-<th><a (click)='onOrderBy("project_name")'>Name{{orderBy === 'project_name' ? orderDesc ? '▼' : '▲' : ''}}</a></th>
+    <th><a (click)='onOrderBy("project_name")'>Name{{orderBy === 'project_name' ? orderDesc ? '▼' : '▲' : ''}}</a></th>
 
 list.component.ts
 
